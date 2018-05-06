@@ -6,6 +6,10 @@
   "repository": "https://github.com/MoonW1nd/Collier",
   "author": "Alexander Ivankov <AlexanderIvankoff@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged"
+  },
   "lint-staged": {
     "*.js": [
       "eslint --fix",
