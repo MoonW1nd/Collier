@@ -1,0 +1,27 @@
+{
+  "name": "collier",
+  "version": "0.0.1",
+  "description": "Experiments to extract information from sites with the help of headless Chrome",
+  "main": "index.js",
+  "repository": "https://github.com/MoonW1nd/Collier",
+  "author": "Alexander Ivankov <AlexanderIvankoff@gmail.com>",
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": "jsonlint"
+  },
+  "dependencies": {
+    "puppeteer": "^1.3.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "husky": "^0.14.3",
+    "jsonlint": "^1.6.3",
+    "lint-staged": "^7.0.5"
+  }
+}
