@@ -7,7 +7,7 @@
   "author": "Alexander Ivankov <AlexanderIvankoff@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -18,16 +18,22 @@
     "*.json": "jsonlint"
   },
   "dependencies": {
+    "babel-preset-env": "^1.6.1",
     "cheerio": "^1.0.0-rc.2",
     "puppeteer": "^1.3.0",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.19.1",
     "husky": "^0.14.3",
+    "jest": "^22.4.3",
     "jsonlint": "^1.6.3",
-    "lint-staged": "^7.0.5"
+    "lint-staged": "^7.0.5",
+    "regenerator-runtime": "^0.11.1"
   }
 }

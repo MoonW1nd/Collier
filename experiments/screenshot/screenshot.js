@@ -1,9 +1,11 @@
-const puppeteer = require('puppeteer');
-const cheerio = require('cheerio');
+import puppeteer from 'puppeteer';
+import cheerio from 'cheerio';
 
 const defaultOptions = {
   uri: 'http://google.com/',
   transform: body => cheerio.load(body),
+  headless: true,
+  path: 'experiments/screenshot/screenshot.png',
 };
 
 const scrape = async (options) => {
@@ -12,9 +14,9 @@ const scrape = async (options) => {
   await page.goto(options.uri);
   const content = await page.content();
   const $ = options.transform(content);
-  await page.screenshot({ path: 'screenshot.png' });
+  await page.screenshot({ path: options.path });
   browser.close();
   return $;
 };
 
-scrape(defaultOptions);
+export default options => scrape({ ...defaultOptions, ...options });
